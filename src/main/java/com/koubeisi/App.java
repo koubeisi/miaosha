@@ -15,10 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @MapperScan("com.koubeisi.dao")
 public class App {
 
-
-
-
-
     public static void main( String[] args ) {
 
         SpringApplication.run(App.class,args);

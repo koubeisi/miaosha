@@ -1,10 +1,13 @@
 package com.koubeisi.controller;
 
-import com.koubeisi.dao.UserDOMapper;
-import com.koubeisi.dataobject.UserDO;
+import com.koubeisi.controller.viewobject.UserVO;
+import com.koubeisi.service.UserService;
+import com.koubeisi.service.model.UserModel;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -13,24 +16,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Date 2019年1月13日 13:26
  * @Version 1.0
  **/
-@Controller
+@Controller("user")
 public class UserController {
 
     @Autowired
-    private UserDOMapper userDOMapper;
+    private UserService userService;
 
-    @GetMapping("/")
+    @GetMapping("/get")
     @ResponseBody
-    public String get(){
+    public UserVO get(@RequestParam(name="id") Integer id){
 
-        UserDO userDO = userDOMapper.selectByPrimaryKey(1);
+        UserModel userModel = userService.getUserModelById(id);
 
-        if (userDO == null){
-            return "用户对象不存在";
-        }else{
-            return userDO.toString();
+        return convertFromUserModel(userModel);
+    }
+
+    private UserVO convertFromUserModel(UserModel userModel){
+
+        UserVO userVO = new UserVO();
+
+        if (userModel != null){
+            BeanUtils.copyProperties(userModel, userVO);
+        } else {
+            userVO = null;
         }
 
+        return userVO;
     }
 
 }

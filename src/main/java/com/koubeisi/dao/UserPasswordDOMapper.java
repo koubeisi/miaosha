@@ -3,6 +3,7 @@ package com.koubeisi.dao;
 import com.koubeisi.dataobject.UserPasswordDO;
 
 public interface UserPasswordDOMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(UserPasswordDO record);
@@ -10,6 +11,8 @@ public interface UserPasswordDOMapper {
     int insertSelective(UserPasswordDO record);
 
     UserPasswordDO selectByPrimaryKey(Integer id);
+
+    UserPasswordDO selectByUserId(Integer userId);
 
     int updateByPrimaryKeySelective(UserPasswordDO record);
 
