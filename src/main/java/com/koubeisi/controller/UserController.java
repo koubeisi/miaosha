@@ -1,6 +1,7 @@
 package com.koubeisi.controller;
 
 import com.koubeisi.controller.viewobject.UserVO;
+import com.koubeisi.response.CommonReturnType;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
 import org.springframework.beans.BeanUtils;
@@ -24,11 +25,22 @@ public class UserController {
 
     @GetMapping("/get")
     @ResponseBody
-    public UserVO get(@RequestParam(name="id") Integer id){
+    public CommonReturnType get(@RequestParam(name="id") Integer id){
 
         UserModel userModel = userService.getUserModelById(id);
 
-        return convertFromUserModel(userModel);
+        UserVO userVO = convertFromUserModel(userModel);
+
+        //返回通用对象
+        CommonReturnType commonReturnType;
+        if (userVO != null){
+
+            commonReturnType = CommonReturnType.create(userVO);
+        } else {
+            commonReturnType = null;
+        }
+
+        return commonReturnType;
     }
 
     private UserVO convertFromUserModel(UserModel userModel){

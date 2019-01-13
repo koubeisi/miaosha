@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4226a56-7cdf-4cd3-be66-4d5e3ef74798" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/viewobject/UserVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/koubeisi/dao/UserPasswordDOMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/response/CommonReturnType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserPasswordDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserPasswordDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/dao/UserPasswordDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/dao/UserPasswordDOMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/dataobject/UserDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/dataobject/UserDO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserPasswordDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserPasswordDOMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="43" />
+          <entry key="java" value="44" />
           <entry key="pom" value="1" />
           <entry key="properties" value="2" />
           <entry key="xml" value="11" />
@@ -52,7 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="43" />
+          <entry key="JAVA" value="44" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="12" />
         </counts>
@@ -60,7 +48,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="104" />
-          <entry key="java" value="1693" />
+          <entry key="java" value="2187" />
           <entry key="properties" value="233" />
           <entry key="txt" value="28" />
           <entry key="xml" value="673" />
@@ -68,7 +56,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1693" />
+          <entry key="JAVA" value="2187" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="Properties" value="233" />
           <entry key="VTL" value="104" />
@@ -88,13 +76,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="66">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/response/CommonReturnType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding>
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+            <state relative-caret-position="201">
+              <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,8 +198,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserPasswordDOMapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/dao/UserPasswordDOMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/viewobject/UserVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/response/CommonReturnType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" />
       </list>
     </option>
@@ -242,7 +252,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="41" />
     <option name="y" value="19" />
     <option name="width" value="1346" />
@@ -684,7 +694,7 @@
       <workItem from="1547202802738" duration="6650000" />
       <workItem from="1547280249101" duration="8329000" />
       <workItem from="1547353073052" duration="8919000" />
-      <workItem from="1547376876831" duration="7817000" />
+      <workItem from="1547376876831" duration="9492000" />
     </task>
     <servers />
   </component>
@@ -721,7 +731,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31715000" />
+    <option name="totallyTimeSpent" value="33390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -733,7 +743,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.28366113" />
@@ -744,7 +754,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3448276" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3448276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -953,20 +963,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="201">
+          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/response/CommonReturnType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="196">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
