@@ -8,10 +8,11 @@ import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Description
@@ -60,6 +61,18 @@ public class UserController {
         }
 
         return userVO;
+    }
+
+    //定义exceptionhandler解决未被controller层捕获的exception
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.OK)
+    public Object handlerException(HttpServletRequest request, Exception exception){
+
+        CommonReturnType commonReturnType = new CommonReturnType();
+        commonReturnType.setStatus("fail");
+        commonReturnType.setData(exception);
+
+        return commonReturnType;
     }
 
 }
