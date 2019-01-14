@@ -1,6 +1,8 @@
 package com.koubeisi.controller;
 
 import com.koubeisi.controller.viewobject.UserVO;
+import com.koubeisi.error.BusinessException;
+import com.koubeisi.error.EnumBussinessError;
 import com.koubeisi.response.CommonReturnType;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
@@ -25,9 +27,13 @@ public class UserController {
 
     @GetMapping("/get")
     @ResponseBody
-    public CommonReturnType get(@RequestParam(name="id") Integer id){
+    public CommonReturnType get(@RequestParam(name="id") Integer id) throws BusinessException {
 
         UserModel userModel = userService.getUserModelById(id);
+
+        if (userModel == null) {
+            throw new BusinessException(EnumBussinessError.USER_NOT_EXIST);
+        }
 
         UserVO userVO = convertFromUserModel(userModel);
 
