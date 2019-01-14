@@ -31,7 +31,7 @@ public class BusinessException extends Exception implements CommonError {
 
     @Override
     public String getErrorMsg() {
-        return this.getErrorMsg();
+        return this.commonError.getErrorMsg();
     }
 
     @Override

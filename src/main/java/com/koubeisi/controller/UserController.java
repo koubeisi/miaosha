@@ -8,15 +8,13 @@ import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Description
- * @Author Max
+ * @Author koubeisi
  * @Date 2019年1月13日 13:26
  * @Version 1.0
  **/
@@ -33,7 +31,8 @@ public class UserController {
         UserModel userModel = userService.getUserModelById(id);
 
         if (userModel == null) {
-            throw new BusinessException(EnumBussinessError.USER_NOT_EXIST);
+            userModel.setEncrptPassword("123");
+//            throw new BusinessException(EnumBussinessError.USER_NOT_EXIST);
         }
 
         UserVO userVO = convertFromUserModel(userModel);
@@ -63,16 +62,17 @@ public class UserController {
         return userVO;
     }
 
-    //定义exceptionhandler解决未被controller层捕获的exception
-    @ExceptionHandler
-    @ResponseStatus(HttpStatus.OK)
-    public Object handlerException(HttpServletRequest request, Exception exception){
-
-        CommonReturnType commonReturnType = new CommonReturnType();
-        commonReturnType.setStatus("fail");
-        commonReturnType.setData(exception);
-
-        return commonReturnType;
-    }
+    //定义@ExceptionHandler解决未被controller层捕获的exception
+//    @ExceptionHandler(value=Exception.class)
+//    @ResponseStatus(HttpStatus.OK)
+//    @ResponseBody
+//    public Object handlerException(HttpServletRequest request, Exception exception){
+//
+//        CommonReturnType commonReturnType = new CommonReturnType();
+//        commonReturnType.setStatus("fail");
+//        commonReturnType.setData(exception);
+//
+//        return commonReturnType;
+//    }
 
 }
