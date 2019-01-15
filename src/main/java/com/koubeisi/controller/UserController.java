@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,8 @@ public class UserController {
     @Autowired
     private HttpServletRequest request;
 
-    @GetMapping("/getotp")
+    @PostMapping(value="/getotp",consumes= MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    @CrossOrigin    //该注解使得此方法支持跨域请求
     public CommonReturnType getOTP(@RequestParam(name="telephone") String telephone) {
 
         //需要按照一定的规则生成OTP验证码

@@ -3,9 +3,11 @@ package com.koubeisi.controller;
 import com.koubeisi.error.BusinessException;
 import com.koubeisi.error.EnumBussinessError;
 import com.koubeisi.response.CommonReturnType;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +23,7 @@ public class ExceptionsHandlers {
 
     //定义@ExceptionHandler解决未被controller层捕获的exception
     @ExceptionHandler(Exception.class)
-//    @ResponseStatus(value = HttpStatus.OK, reason = "捕获的异常")
+    @ResponseStatus(value = HttpStatus.OK, reason = "捕获的异常")
     @ResponseBody
     public CommonReturnType handlerException(Exception exception){
 
