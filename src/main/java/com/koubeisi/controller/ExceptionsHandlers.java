@@ -17,7 +17,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 @ControllerAdvice
-public class ExceptionsHandler {
+public class ExceptionsHandlers {
 
     //定义@ExceptionHandler解决未被controller层捕获的exception
     @ExceptionHandler(Exception.class)
