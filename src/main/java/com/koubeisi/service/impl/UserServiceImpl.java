@@ -4,8 +4,11 @@ import com.koubeisi.dao.UserDOMapper;
 import com.koubeisi.dao.UserPasswordDOMapper;
 import com.koubeisi.dataobject.UserDO;
 import com.koubeisi.dataobject.UserPasswordDO;
+import com.koubeisi.error.BusinessException;
+import com.koubeisi.error.EnumBussinessError;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +39,54 @@ public class UserServiceImpl implements UserService {
 
         //把UserDO和UserPasswordDO转换位UserModel
         return convertFromDataObject(userDO, userPasswordDO);
+    }
+
+    @Override
+    public void register(UserModel userModel) throws BusinessException {
+        if (userModel == null){
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+        }
+
+        if (StringUtils.isEmpty(userModel.getName())
+                || userModel.getAge() == null
+                || userModel.getGender() == null
+                || StringUtils.isEmpty(userModel.getTelephone())) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+        }
+
+        UserDO userDO = convertFromModel(userModel);
+
+        userDOMapper.insertSelective(userDO);
+
+        UserPasswordDO userPasswordDO = convertPasswordFromModel(userModel);
+
+        userPasswordDOMapper.insertSelective(userPasswordDO);
+
+    }
+
+    private UserDO convertFromModel(UserModel userModel) {
+
+        if (userModel == null) {
+            return null;
+        }
+
+        UserDO userDO = new UserDO();
+        BeanUtils.copyProperties(userModel,userDO);
+
+        return userDO;
+    }
+
+    private UserPasswordDO convertPasswordFromModel(UserModel userModel) {
+
+        if (userModel == null) {
+            return null;
+        }
+
+        UserPasswordDO userPasswordDO = new UserPasswordDO();
+        userPasswordDO.setUserId(userModel.getId());
+        userPasswordDO.setEncrptPassword(userModel.getEncrptPassword());
+
+        return userPasswordDO;
     }
 
 

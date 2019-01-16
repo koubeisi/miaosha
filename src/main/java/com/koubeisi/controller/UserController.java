@@ -6,13 +6,13 @@ import com.koubeisi.error.EnumBussinessError;
 import com.koubeisi.response.CommonReturnType;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
-import org.apache.catalina.User;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.tomcat.util.security.MD5Encoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +36,32 @@ public class UserController {
 
     @Autowired
     private HttpServletRequest request;
+
+    //用户注册接口
+    @PostMapping("/register")
+    public CommonReturnType register(@RequestParam(value = "telephone") String telephone,
+                                     @RequestParam(value = "otpCode") String otpCode,
+                                     @RequestParam(value = "name") String name,
+                                     @RequestParam(value = "password") String password,
+                                     @RequestParam(value = "gender") Byte gender,
+                                     @RequestParam(value = "age") Integer age) throws BusinessException {
+        //验证手机号与对应的otpCode相符合
+        String inSessionOtpCode = (String) request.getSession().getAttribute(telephone);
+        if (!StringUtils.equals(otpCode, inSessionOtpCode)) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,"短信验证码不符合");
+        }
+        //用户注册流程
+        UserModel userModel = new UserModel();
+        userModel.setName(name);
+        userModel.setAge(age);
+        userModel.setGender(gender);
+        userModel.setTelephone(telephone);
+        userModel.setRegistreMode("byphone");
+        userModel.setEncrptPassword(MD5Encoder.encode(password.getBytes()));
+        userService.register(userModel);
+
+        return CommonReturnType.create(null);
+    }
 
     @PostMapping(value="/getotp",consumes= MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     @CrossOrigin    //该注解使得此方法支持跨域请求
