@@ -11,7 +11,9 @@ import com.koubeisi.service.model.UserModel;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description
@@ -42,21 +44,30 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void register(UserModel userModel) throws BusinessException {
         if (userModel == null){
             throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
         }
-
+        //如果需要的信息为空，则抛出异常
         if (StringUtils.isEmpty(userModel.getName())
                 || userModel.getAge() == null
                 || userModel.getGender() == null
-                || StringUtils.isEmpty(userModel.getTelephone())) {
+                || StringUtils.isEmpty(userModel.getTelephone())
+                || StringUtils.isEmpty(userModel.getEncrptPassword())) {
             throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
         }
 
         UserDO userDO = convertFromModel(userModel);
-
-        userDOMapper.insertSelective(userDO);
+        //在UserDOMapper.xml映射文件中设置属性keyProperty="id" useGeneratedKeys="true"
+        //无需重新查询，生成的id的值会自动设置到userDO中
+        try {
+            userDOMapper.insertSelective(userDO);       //1.此时，userDO的id属性为null
+        } catch (DuplicateKeyException exception) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,"手机号已经注册");
+        }
+        //因此，在此可以直接调用其id
+        userModel.setId(userDO.getId());                //2.此时，userDO的id属性已经生成
 
         UserPasswordDO userPasswordDO = convertPasswordFromModel(userModel);
 

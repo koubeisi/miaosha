@@ -23,7 +23,7 @@ public class ExceptionsHandlers {
 
     //定义@ExceptionHandler解决未被controller层捕获的exception
     @ExceptionHandler(Exception.class)
-    @ResponseStatus(value = HttpStatus.OK, reason = "捕获的异常")
+    //@ResponseStatus(value = HttpStatus.OK, reason = "捕获的异常")  //如果使用@ResponseStatus使得返回的是value和reason的值
     @ResponseBody
     public CommonReturnType handlerException(Exception exception){
 

@@ -31,7 +31,7 @@
       #{age,jdbcType=INTEGER}, #{telephone,jdbcType=VARCHAR}, #{registreMode,jdbcType=VARCHAR}, 
       #{thirdPartyId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.koubeisi.dataobject.UserDO">
+  <insert id="insertSelective" parameterType="com.koubeisi.dataobject.UserDO" keyProperty="id" useGeneratedKeys="true">
     insert into user_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
