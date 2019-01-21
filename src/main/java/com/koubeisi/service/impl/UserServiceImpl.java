@@ -75,6 +75,27 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public UserModel validateLogin(String telehpone, String encrptPassword) throws BusinessException {
+
+        //通过手机号获取数据库中用户信息
+        UserDO userDO = userDOMapper.selectByTelephone(telehpone);
+        if (userDO == null) {
+            throw new BusinessException(EnumBussinessError.USER_LOGIN_FAIL);
+        }
+
+        //通过用户id获取数据库中用户密码信息
+        UserPasswordDO userPasswordDO = userPasswordDOMapper.selectByUserId(userDO.getId());
+        UserModel userModel = convertFromDataObject(userDO,userPasswordDO);
+
+        //对比密码是否正确
+        if (!StringUtils.equals(userPasswordDO.getEncrptPassword(), encrptPassword)) {
+            throw new BusinessException(EnumBussinessError.USER_LOGIN_FAIL);
+        }
+
+        return userModel;
+    }
+
     private UserDO convertFromModel(UserModel userModel) {
 
         if (userModel == null) {

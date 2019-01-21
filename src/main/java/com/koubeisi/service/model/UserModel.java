@@ -2,7 +2,7 @@ package com.koubeisi.service.model;
 
 /**
  * @Description
- * @Author Max
+ * @Author koubeisi
  * @Date 2019/1/13 16:20
  * @Version 1.0
  **/

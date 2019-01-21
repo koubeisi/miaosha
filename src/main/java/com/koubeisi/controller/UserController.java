@@ -78,6 +78,25 @@ public class UserController {
         return newStr;
     }
 
+    @PostMapping("/login")
+    public CommonReturnType login(@RequestParam(value = "telephone") String telephone,
+                                  @RequestParam(value = "password") String password) throws BusinessException, UnsupportedEncodingException, NoSuchAlgorithmException {
+        //入参校验
+        if (StringUtils.isEmpty(telephone) || StringUtils.isEmpty(password)) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+        }
+
+        //用户登录校验，校验登录是否合法
+        UserModel userModel = userService.validateLogin(telephone, this.encodeByMD5(password));
+
+        //将登录凭证加入到用户登录成功的session内
+        request.getSession().setAttribute("IS_LOGIN",true);
+        request.getSession().setAttribute("LOGIN_USER", userModel);
+
+        return CommonReturnType.create(null);
+
+    }
+
 
     @PostMapping(value="/getotp",consumes= MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     //@CrossOrigin    //该注解使得此方法支持跨域请求
