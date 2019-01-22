@@ -8,6 +8,8 @@ import com.koubeisi.error.BusinessException;
 import com.koubeisi.error.EnumBussinessError;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
+import com.koubeisi.validate.ValidatorResult;
+import com.koubeisi.validate.ValidatorUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserPasswordDOMapper userPasswordDOMapper;
 
+    @Autowired
+    private ValidatorUtil validatorUtil;
+
     @Override
     public UserModel getUserModelById(Integer id){
 
@@ -50,12 +55,16 @@ public class UserServiceImpl implements UserService {
             throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
         }
         //如果需要的信息为空，则抛出异常
-        if (StringUtils.isEmpty(userModel.getName())
-                || userModel.getAge() == null
-                || userModel.getGender() == null
-                || StringUtils.isEmpty(userModel.getTelephone())
-                || StringUtils.isEmpty(userModel.getEncrptPassword())) {
-            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+//        if (StringUtils.isEmpty(userModel.getName())
+//                || userModel.getAge() == null
+//                || userModel.getGender() == null
+//                || StringUtils.isEmpty(userModel.getTelephone())
+//                || StringUtils.isEmpty(userModel.getEncrptPassword())) {
+//            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+//        }
+        ValidatorResult validatorResult = validatorUtil.validate(userModel);
+        if (validatorResult.getHasError()) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,validatorResult.getErrorMsg());
         }
 
         UserDO userDO = convertFromModel(userModel);

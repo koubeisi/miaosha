@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4226a56-7cdf-4cd3-be66-4d5e3ef74798" name="Default Changelist" comment="3-5 定义通用的返回对象--异常处理01">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/koubeisi/validate/ValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/service/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/service/model/UserModel.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,8 +71,9 @@
     <session id="-1767241313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.28" value="1" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.40" value="1" />
@@ -83,29 +82,29 @@
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.71" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="14" />
+          <entry key="html" value="15" />
           <entry key="http" value="1" />
-          <entry key="java" value="183" />
+          <entry key="java" value="193" />
           <entry key="pom" value="1" />
           <entry key="properties" value="5" />
           <entry key="sql" value="3" />
           <entry key="user_info" value="1" />
-          <entry key="xml" value="17" />
+          <entry key="xml" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="1" />
-          <entry key="HTML" value="14" />
-          <entry key="JAVA" value="183" />
+          <entry key="HTML" value="15" />
+          <entry key="JAVA" value="193" />
           <entry key="Properties" value="5" />
           <entry key="Scratch" value="4" />
-          <entry key="XML" value="18" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -113,22 +112,22 @@
           <entry key="ft" value="114" />
           <entry key="html" value="824" />
           <entry key="http" value="9" />
-          <entry key="java" value="6790" />
+          <entry key="java" value="7834" />
           <entry key="properties" value="482" />
           <entry key="sql" value="24" />
           <entry key="txt" value="59" />
-          <entry key="xml" value="749" />
+          <entry key="xml" value="763" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="824" />
-          <entry key="JAVA" value="6790" />
+          <entry key="JAVA" value="7834" />
           <entry key="PLAIN_TEXT" value="59" />
           <entry key="Properties" value="482" />
           <entry key="Scratch" value="33" />
           <entry key="VTL" value="114" />
-          <entry key="XML" value="749" />
+          <entry key="XML" value="763" />
         </counts>
       </usages-collector>
     </session>
@@ -138,8 +137,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+            <state relative-caret-position="103">
+              <caret line="89" column="11" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,47 +161,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="221">
+              <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="34">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/BusinessException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/otp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -204,8 +190,8 @@
         <option value="JUnit3 Test Class" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -237,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/java/JavaTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/java/CommonsLangTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/dao/UserDOMapperTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/PageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
@@ -246,12 +231,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDOMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserDOMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/validate/ValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -309,7 +298,7 @@
       <path value="$PROJECT_DIR$/src/main/resources/static/assets/global/plugins/select2/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -557,6 +546,15 @@
               <item name="miaosha" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="koubeisi" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -588,13 +586,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="UserDO&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml&#10;Usermapp&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/resources/mybatis/mapper/UserDOMapper.xml&#10;App&#9;PSI&#9;JAVA://com.koubeisi.App&#10;miaos&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/pom.xml&#10;UserMo&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/java/com/koubeisi/service/model/UserModel.java" />
+    <property name="SearchEverywhereHistoryKey" value="pom&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/pom.xml&#10;UserDO&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml&#10;Usermapp&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/resources/mybatis/mapper/UserDOMapper.xml&#10;App&#9;PSI&#9;JAVA://com.koubeisi.App&#10;miaos&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/pom.xml&#10;UserMo&#9;FILE&#9;file://E:/Java Development Learning/workspace/miaosha/src/main/java/com/koubeisi/service/model/UserModel.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
@@ -604,12 +602,24 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring Boot-Mybatis" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.koubeisi.validate" />
       <recent name="com.koubeisi.dao" />
       <recent name="com.koubeisi.service.impl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.koubeisi.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources\templates" />
+      <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources\templates" />
@@ -617,17 +627,6 @@
       <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources" />
       <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources\static\test" />
       <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources\mybatis\mapper" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.koubeisi.service.impl" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="junit.framework.TestCase" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources\templates" />
-      <recent name="E:\Java Development Learning\workspace\miaosha\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -690,6 +689,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ValidatorTest" type="JUnit" factoryName="JUnit">
+      <module name="miaosha" />
+      <option name="PACKAGE_NAME" value="com.koubeisi.validate" />
+      <option name="MAIN_CLASS_NAME" value="com.koubeisi.validate.ValidatorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -717,6 +726,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.SpringBootApp" />
+      <item itemvalue="JUnit.ValidatorTest" />
       <item itemvalue="JUnit.CommonsLangTest" />
       <item itemvalue="JUnit.UserDOMapperTest" />
       <item itemvalue="JUnit.UserServiceImplTest" />
@@ -751,7 +761,9 @@
       <workItem from="1547694107515" duration="1674000" />
       <workItem from="1547791221742" duration="5616000" />
       <workItem from="1548030183026" duration="8075000" />
-      <workItem from="1548057887355" duration="8049000" />
+      <workItem from="1548057887355" duration="8172000" />
+      <workItem from="1548077729670" duration="1466000" />
+      <workItem from="1548127680646" duration="8346000" />
     </task>
     <task id="LOCAL-00001" summary="3-5 定义通用的返回对象--异常处理01">
       <created>1547440842534</created>
@@ -764,39 +776,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserPasswordDOMapperTest - 2019.01.13 at 21h 59m 37s.xml">
-      <configuration name="UserPasswordDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 12h 37m 07s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserPasswordDOMapperTest - 2019.01.13 at 22h 19m 31s.xml">
-      <configuration name="UserPasswordDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 12h 37m 24s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserPasswordDOMapperTest - 2019.01.13 at 22h 20m 54s.xml">
-      <configuration name="UserPasswordDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 12h 43m 39s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest - 2019.01.13 at 22h 21m 30s.xml">
-      <configuration name="UserServiceImplTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 07m 17s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImplTest - 2019.01.13 at 22h 22m 00s.xml">
-      <configuration name="UserServiceImplTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 07m 43s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommonsLangTest - 2019.01.16 at 00h 30m 18s.xml">
-      <configuration name="CommonsLangTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 07m 57s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDOMapperTest - 2019.01.16 at 17h 44m 01s.xml">
-      <configuration name="UserDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 08m 05s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDOMapperTest - 2019.01.16 at 17h 47m 18s.xml">
-      <configuration name="UserDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 08m 23s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDOMapperTest - 2019.01.16 at 17h 48m 14s.xml">
-      <configuration name="UserDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 12m 25s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDOMapperTest - 2019.01.16 at 18h 57m 00s.xml">
-      <configuration name="UserDOMapperTest" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2019.01.22 at 13h 13m 08s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94614000" />
+    <option name="totallyTimeSpent" value="104549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -808,19 +820,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.24886535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" sideWeight="0.50163937" side_tool="true" weight="0.2065053" />
       <window_info id="Designer" order="3" />
       <window_info id="Learn" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3448276" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39901477" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3448276" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3464696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.32840723" />
@@ -852,59 +863,19 @@
     <MESSAGE value="3-6 用户模型管理--otp验证码获取" />
     <option name="LAST_COMMIT_MESSAGE" value="3-6 用户模型管理--otp验证码获取" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/thymeleaf/ThymeleafProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="41" column="70" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="293" column="27" selection-start-line="293" selection-start-column="27" selection-end-line="293" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/ResourceProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/CrossOrigin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1253">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1108,13 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/BusinessException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ExceptionsHandlers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1124,13 +1088,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserPasswordDOMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/otp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserDOMapper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1143,13 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1178,13 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1195,20 +1138,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/otp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="89" column="50" lean-forward="true" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+        <state relative-caret-position="714">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="127" column="7" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="89" column="11" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/koubeisi/validate/ValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/error/BusinessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="153">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1217,8 +1251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        <state relative-caret-position="221">
+          <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
         </state>
       </provider>
     </entry>
