@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -92,11 +94,28 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<ItemModel> itemModelList() {
-        return null;
+
+        List<ItemDO> itemDOList = itemDOMapper.selectAllItem();
+
+        Iterator<ItemDO> itemDOIterator= itemDOList.iterator();
+
+        List<ItemModel> itemModelList = new ArrayList<>();
+        while (itemDOIterator.hasNext()) {
+            ItemDO itemDO=itemDOIterator.next();
+            ItemStockDO itemStockDO=itemStockDOMapper.selectByItemId(itemDO.getId());
+            ItemModel itemModel=convertModelFromDataObject(itemDO,itemStockDO);
+            itemModelList.add(itemModel);
+        }
+
+        return itemModelList;
     }
 
     @Override
-    public ItemModel getItemModelById(Integer id) {
+    public ItemModel getItemModelById(Integer id) throws BusinessException {
+
+        if (id == null) {
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
+        }
 
         ItemDO itemDO = itemDOMapper.selectByPrimaryKey(id);
         if (itemDO == null) {

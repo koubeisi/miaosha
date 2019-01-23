@@ -20,7 +20,7 @@ public interface ItemService {
     List<ItemModel> itemModelList();
 
     //商品详情浏览
-    ItemModel getItemModelById(Integer id);
+    ItemModel getItemModelById(Integer id) throws BusinessException;
 
 
 }

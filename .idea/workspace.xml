@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4226a56-7cdf-4cd3-be66-4d5e3ef74798" name="Default Changelist" comment="3-5 定义通用的返回对象--异常处理01">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/viewobject/ItemVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/createitem.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/PageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemStockDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemStockDOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemStockDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemStockDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/service/model/ItemModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/service/model/ItemModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/koubeisi/validate/ValidatorResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/koubeisi/validate/ValidatorResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserPasswordDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserPasswordDOMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/koubeisi/service/impl/ItemServiceImplTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,7 +66,7 @@
     <session id="-1767241313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.29" value="1" />
@@ -95,49 +88,49 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="html" value="15" />
+          <entry key="html" value="16" />
           <entry key="http" value="1" />
-          <entry key="java" value="226" />
+          <entry key="java" value="233" />
           <entry key="pom" value="1" />
           <entry key="properties" value="6" />
           <entry key="sql" value="3" />
           <entry key="user_info" value="1" />
           <entry key="user_password" value="1" />
-          <entry key="xml" value="33" />
+          <entry key="xml" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Database Element" value="2" />
-          <entry key="HTML" value="15" />
-          <entry key="JAVA" value="226" />
+          <entry key="HTML" value="16" />
+          <entry key="JAVA" value="233" />
           <entry key="Properties" value="6" />
           <entry key="Scratch" value="4" />
-          <entry key="XML" value="34" />
+          <entry key="XML" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="114" />
-          <entry key="html" value="824" />
+          <entry key="html" value="919" />
           <entry key="http" value="9" />
-          <entry key="java" value="9812" />
+          <entry key="java" value="10439" />
           <entry key="properties" value="482" />
           <entry key="sql" value="24" />
           <entry key="txt" value="59" />
-          <entry key="xml" value="865" />
+          <entry key="xml" value="896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="824" />
-          <entry key="JAVA" value="9812" />
+          <entry key="HTML" value="919" />
+          <entry key="JAVA" value="10439" />
           <entry key="PLAIN_TEXT" value="59" />
           <entry key="Properties" value="482" />
           <entry key="Scratch" value="33" />
           <entry key="VTL" value="114" />
-          <entry key="XML" value="865" />
+          <entry key="XML" value="896" />
         </counts>
       </usages-collector>
     </session>
@@ -145,22 +138,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="273">
+              <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,22 +150,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="270">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemStockDOMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -192,17 +164,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+            <state relative-caret-position="544">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/viewobject/ItemVO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dataobject/UserDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/UserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/UserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserPasswordDOMapper.java" />
@@ -257,7 +240,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/UserDOMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/error/EnumBussinessError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/UserModel.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/validate/ValidatorTest.java" />
@@ -272,12 +254,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/validate/ValidatorResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemStockDOMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/viewobject/ItemVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemStockDOMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/createitem.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java" />
       </list>
@@ -348,7 +333,7 @@
       <path value="$PROJECT_DIR$/src/main/resources/static/assets/global/plugins/select2/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -698,7 +683,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="koubeisi" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -759,7 +744,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ItemServiceImplTest">
+  <component name="RunManager" selected="Application.SpringBootApp">
     <configuration name="SpringBootApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.koubeisi.App" />
       <module name="miaosha" />
@@ -898,7 +883,7 @@
       <workItem from="1548161249624" duration="1293000" />
       <workItem from="1548170638262" duration="872000" />
       <workItem from="1548215160658" duration="8543000" />
-      <workItem from="1548234534746" duration="3855000" />
+      <workItem from="1548234534746" duration="8174000" />
     </task>
     <task id="LOCAL-00001" summary="3-5 定义通用的返回对象--异常处理01">
       <created>1547440842534</created>
@@ -911,18 +896,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ValidatorTest - 2019.01.22 at 13h 12m 25s.xml">
-      <configuration name="ValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ValidatorTest - 2019.01.22 at 13h 13m 08s.xml">
-      <configuration name="ValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDOMapperTest - 2019.01.23 at 13h 39m 01s.xml">
-      <configuration name="UserDOMapperTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ItemServiceImplTest - 2019.01.23 at 17h 35m 20s.xml">
-      <configuration name="ItemServiceImplTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ItemServiceImplTest - 2019.01.23 at 17h 37m 17s.xml">
       <configuration name="ItemServiceImplTest" configurationId="JUnit" />
     </history-entry>
@@ -941,9 +914,21 @@
     <history-entry file="ItemServiceImplTest - 2019.01.23 at 19h 28m 05s.xml">
       <configuration name="ItemServiceImplTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ItemServiceImplTest - 2019.01.23 at 19h 41m 39s.xml">
+      <configuration name="ItemServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemServiceImplTest - 2019.01.23 at 19h 56m 26s.xml">
+      <configuration name="ItemServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemServiceImplTest - 2019.01.23 at 20h 31m 34s.xml">
+      <configuration name="ItemServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ItemServiceImplTest - 2019.01.23 at 20h 37m 05s.xml">
+      <configuration name="ItemServiceImplTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122045000" />
+    <option name="totallyTimeSpent" value="126364000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -955,8 +940,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.24281392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -966,7 +950,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3448276" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3448276" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3464696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1000,13 +984,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="3-6 用户模型管理--otp验证码获取" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="661" selection-start-line="661" selection-end-line="661" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1067,13 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1253,16 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dataobject/ItemStockDO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1311,13 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemStockDOMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1325,47 +1278,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemStockDOMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,10 +1302,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ItemDOMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/dao/ItemDOMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/createitem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/impl/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/service/model/ItemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/koubeisi/service/impl/ItemServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/koubeisi/controller/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        <state relative-caret-position="544">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.Iterator;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -35,10 +37,18 @@ public class ItemServiceImplTest {
 
     @Test
     public void itemModelList() {
+        List<ItemModel> itemModelList= itemService.itemModelList();
+
+        Iterator<ItemModel> itemModelIterator = itemModelList.iterator();
+
+        while (itemModelIterator.hasNext()){
+            System.out.println(itemModelIterator.next().toString());
+        }
+
     }
 
-    @Test
-    public void getItemModelById() {
+//    @Test
+    public void getItemModelById() throws BusinessException {
         ItemModel itemModel = itemService.getItemModelById(2);
         System.out.println(itemModel.toString());
     }
