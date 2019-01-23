@@ -7,7 +7,6 @@ import com.koubeisi.response.CommonReturnType;
 import com.koubeisi.service.UserService;
 import com.koubeisi.service.model.UserModel;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -52,7 +51,7 @@ public class UserController {
         //验证手机号与对应的otpCode相符合
         String inSessionOtpCode = (String) request.getSession().getAttribute(telephone);
         if (!StringUtils.equals(otpCode, inSessionOtpCode)) {
-            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,"短信验证码不符合");
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR, "短信验证码不符合");
         }
         //用户注册流程
         UserModel userModel = new UserModel();
@@ -90,7 +89,7 @@ public class UserController {
         UserModel userModel = userService.validateLogin(telephone, this.encodeByMD5(password));
 
         //将登录凭证加入到用户登录成功的session内
-        request.getSession().setAttribute("IS_LOGIN",true);
+        request.getSession().setAttribute("IS_LOGIN", true);
         request.getSession().setAttribute("LOGIN_USER", userModel);
 
         return CommonReturnType.create(null);
@@ -98,9 +97,9 @@ public class UserController {
     }
 
 
-    @PostMapping(value="/getotp",consumes= MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    @PostMapping(value = "/getotp", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     //@CrossOrigin    //该注解使得此方法支持跨域请求
-    public CommonReturnType getOTP(@RequestParam(name="telephone") String telephone) {
+    public CommonReturnType getOTP(@RequestParam(name = "telephone") String telephone) {
 
         //需要按照一定的规则生成OTP验证码
         Random random = new Random();
@@ -118,7 +117,7 @@ public class UserController {
     }
 
     @GetMapping("/get")
-    public CommonReturnType get(@RequestParam(name="id") Integer id) throws BusinessException {
+    public CommonReturnType get(@RequestParam(name = "id") Integer id) throws BusinessException {
 
         UserModel userModel = userService.getUserModelById(id);
 
@@ -131,7 +130,7 @@ public class UserController {
 
         //返回通用对象
         CommonReturnType commonReturnType;
-        if (userVO != null){
+        if (userVO != null) {
 
             commonReturnType = CommonReturnType.create(userVO);
         } else {
@@ -141,11 +140,11 @@ public class UserController {
         return commonReturnType;
     }
 
-    private UserVO convertFromUserModel(UserModel userModel){
+    private UserVO convertFromUserModel(UserModel userModel) {
 
         UserVO userVO = new UserVO();
 
-        if (userModel != null){
+        if (userModel != null) {
             BeanUtils.copyProperties(userModel, userVO);
         } else {
             userVO = null;

@@ -29,7 +29,7 @@
     delete from user_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.koubeisi.dataobject.UserDO">
+  <insert id="insert" parameterType="com.koubeisi.dataobject.UserDO" keyProperty="id" useGeneratedKeys="true">
     insert into user_info (id, name, gender, 
       age, telephone, registre_mode, 
       third_party_id)

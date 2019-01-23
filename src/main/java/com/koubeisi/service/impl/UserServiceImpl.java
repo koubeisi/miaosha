@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
     private ValidatorUtil validatorUtil;
 
     @Override
-    public UserModel getUserModelById(Integer id){
+    public UserModel getUserModelById(Integer id) {
 
         //通过userDOMapper获取对应的UserDO
         UserDO userDO = userDOMapper.selectByPrimaryKey(id);
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void register(UserModel userModel) throws BusinessException {
-        if (userModel == null){
+        if (userModel == null) {
             throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR);
         }
         //如果需要的信息为空，则抛出异常
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 //        }
         ValidatorResult validatorResult = validatorUtil.validate(userModel);
         if (validatorResult.getHasError()) {
-            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,validatorResult.getErrorMsg());
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR, validatorResult.getErrorMsg());
         }
 
         UserDO userDO = convertFromModel(userModel);
@@ -73,7 +73,7 @@ public class UserServiceImpl implements UserService {
         try {
             userDOMapper.insertSelective(userDO);       //1.此时，userDO的id属性为null
         } catch (DuplicateKeyException exception) {
-            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR,"手机号已经注册");
+            throw new BusinessException(EnumBussinessError.PARAMETER_VALIDATION_ERROR, "手机号已经注册");
         }
         //因此，在此可以直接调用其id
         userModel.setId(userDO.getId());                //2.此时，userDO的id属性已经生成
@@ -95,7 +95,7 @@ public class UserServiceImpl implements UserService {
 
         //通过用户id获取数据库中用户密码信息
         UserPasswordDO userPasswordDO = userPasswordDOMapper.selectByUserId(userDO.getId());
-        UserModel userModel = convertFromDataObject(userDO,userPasswordDO);
+        UserModel userModel = convertFromDataObject(userDO, userPasswordDO);
 
         //对比密码是否正确
         if (!StringUtils.equals(userPasswordDO.getEncrptPassword(), encrptPassword)) {
@@ -112,7 +112,7 @@ public class UserServiceImpl implements UserService {
         }
 
         UserDO userDO = new UserDO();
-        BeanUtils.copyProperties(userModel,userDO);
+        BeanUtils.copyProperties(userModel, userDO);
 
         return userDO;
     }
@@ -131,16 +131,16 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    private UserModel convertFromDataObject(UserDO userDO, UserPasswordDO userPasswordDO){
+    private UserModel convertFromDataObject(UserDO userDO, UserPasswordDO userPasswordDO) {
 
         UserModel userModel = new UserModel();
 
-        if (userDO == null){
+        if (userDO == null) {
             userModel = null;
         } else {
             BeanUtils.copyProperties(userDO, userModel);
         }
-        if (userPasswordDO != null){
+        if (userPasswordDO != null) {
             userModel.setEncrptPassword(userPasswordDO.getEncrptPassword());
         }
 

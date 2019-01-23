@@ -30,7 +30,7 @@ public class UserDOMapperTest {
     public void insertSelective() {
 
         UserDO userDO = new UserDO();
-//        userDO.setName("寇倍思");
+        userDO.setName("寇倍思");
         userDO.setAge(27);
         userDO.setGender(new Byte("1"));
         userDO.setRegistreMode("byphone");
