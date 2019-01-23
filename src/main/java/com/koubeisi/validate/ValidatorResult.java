@@ -17,16 +17,27 @@ public class ValidatorResult {
 
     private Map<String, String> errorMsgMap = new HashMap<>();
 
+    public boolean isHasError() {
+        return this.hasError;
+    }
 
-    public void setHasError(boolean hasError) { this.hasError = hasError; }
+    public void setHasError(boolean hasError) {
+        this.hasError = hasError;
+    }
 
-    public boolean getHasError() { return this.hasError; }
+    public boolean getHasError() {
+        return this.hasError;
+    }
 
-    public void setErrorMsgMap(Map<String, String> errorMsgMap) { this.errorMsgMap = errorMsgMap; }
+    public void setErrorMsgMap(Map<String, String> errorMsgMap) {
+        this.errorMsgMap = errorMsgMap;
+    }
 
-    public Map<String, String> getErrorMsgMap() { return this.errorMsgMap; }
+    public Map<String, String> getErrorMsgMap() {
+        return this.errorMsgMap;
+    }
 
     public String getErrorMsg() {
-        return StringUtils.join(errorMsgMap.values().iterator(),',');
+        return StringUtils.join(errorMsgMap.values().iterator(), ',');
     }
 }

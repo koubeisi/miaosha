@@ -14,7 +14,7 @@
         </commentGenerator>
         <!-- 数据库链接URL、用户名、密码 -->
         <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/my_db?characterEncoding=utf8" userId="root" password="123456"> -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.1.7:3306/miaosha" userId="root" password="1991428">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/miaosha" userId="root" password="1991428">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
