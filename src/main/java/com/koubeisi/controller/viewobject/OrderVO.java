@@ -1,21 +1,19 @@
-package com.koubeisi.service.model;
+package com.koubeisi.controller.viewobject;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 
 /**
  * @Description
  * @Author koubeisi
- * @Date 2019/1/24 16:10
+ * @Date 2019/1/29 18:51
  * @Version 1.0
  **/
 @Getter
 @Setter
-@ToString
-public class OrderModel {
+public class OrderVO {
 
     //2019012400012828
     private String id;

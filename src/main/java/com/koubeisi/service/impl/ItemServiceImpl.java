@@ -11,8 +11,9 @@ import com.koubeisi.service.model.ItemModel;
 import com.koubeisi.validate.ValidatorResult;
 import com.koubeisi.validate.ValidatorUtil;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -97,13 +98,13 @@ public class ItemServiceImpl implements ItemService {
 
         List<ItemDO> itemDOList = itemDOMapper.selectAllItem();
 
-        Iterator<ItemDO> itemDOIterator= itemDOList.iterator();
+        Iterator<ItemDO> itemDOIterator = itemDOList.iterator();
 
         List<ItemModel> itemModelList = new ArrayList<>();
         while (itemDOIterator.hasNext()) {
-            ItemDO itemDO=itemDOIterator.next();
-            ItemStockDO itemStockDO=itemStockDOMapper.selectByItemId(itemDO.getId());
-            ItemModel itemModel=convertModelFromDataObject(itemDO,itemStockDO);
+            ItemDO itemDO = itemDOIterator.next();
+            ItemStockDO itemStockDO = itemStockDOMapper.selectByItemId(itemDO.getId());
+            ItemModel itemModel = convertModelFromDataObject(itemDO, itemStockDO);
             itemModelList.add(itemModel);
         }
 
@@ -123,17 +124,39 @@ public class ItemServiceImpl implements ItemService {
         }
 
         //操作获得库存数量
-        ItemStockDO itemStockDO= itemStockDOMapper.selectByItemId(itemDO.getId());
+        ItemStockDO itemStockDO = itemStockDOMapper.selectByItemId(itemDO.getId());
 
-        ItemModel itemModel = convertModelFromDataObject(itemDO,itemStockDO);
+        ItemModel itemModel = convertModelFromDataObject(itemDO, itemStockDO);
 
         return itemModel;
     }
 
-    private ItemModel convertModelFromDataObject(ItemDO itemDO,ItemStockDO itemStockDO){
+    @Override
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) {
+
+        int affactedRow = itemStockDOMapper.decreaseStock(itemId, amount);
+        if (affactedRow > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+    public Boolean increaseSales(Integer itemId, Integer amount) {
+        int affactedRow = itemDOMapper.increaseSales(itemId, amount);
+        if (affactedRow > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    private ItemModel convertModelFromDataObject(ItemDO itemDO, ItemStockDO itemStockDO) {
 
         ItemModel itemModel = new ItemModel();
-        BeanUtils.copyProperties(itemDO,itemModel);
+        BeanUtils.copyProperties(itemDO, itemModel);
         itemModel.setPrice(new BigDecimal(itemDO.getPrice()));
         itemModel.setStock(itemStockDO.getStock());
 

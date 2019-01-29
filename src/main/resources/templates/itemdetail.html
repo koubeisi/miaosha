@@ -11,40 +11,43 @@
 <body class="login">
     <div class="content">
         <h3 class="form-table">商品详情</h3>
-        <div>
-            <div class="form-group">
+        <div class="form-group">
+            <div>
                 <label id="title" class="control-label"></label>
             </div>
         </div>
-        <div>
+        <div class="form-group">
             <label class="control-label">商品价格</label>
-            <div class="form-group">
+            <div>
                 <label id="price" class="control-label"></label>
             </div>
         </div>
-        <div>
+        <div class="form-group">
             <label class="control-label">商品销量</label>
-            <div class="form-group">
+            <div>
                 <label id="sales" class="control-label"></label>
             </div>
         </div>
-        <div>
+        <div class="form-group">
             <label class="control-label">商品库存</label>
-            <div class="form-group">
+            <div>
                 <label id="stock" class="control-label"></label>
             </div>
         </div>
-        <div>
+        <div class="form-group">
             <label class="control-label">商品描述</label>
-            <div class="form-group">
+            <div>
                 <label id="description" class="control-label"></label>
             </div>
         </div>
-        <div>
+        <div class="form-group">
             <label class="control-label">商品图片</label>
-            <div class="form-group">
+            <div>
                 <img style="width: 200px;height: auto" id="imgUrl"/>
             </div>
+        </div>
+        <div class="form-action">
+            <button class="btn blue" type="submit" id="createorder">下单</button>
         </div>
     </div>  
 </body>
@@ -63,6 +66,32 @@
 
     jQuery(document).ready(function(){
 
+        $("#createorder").on("click",function () {
+            $.ajax({
+                type:"Post",
+                url:"/order/create",
+                contentType:"application/x-www-form-urlencoded",
+                data:{
+                    "itemId":getUrlParam(),
+                    "amount":1
+                },
+                success:function(data){
+                    if(data.status == "success"){
+                        alert("下单成功! " + "订单价格：" + data.data.orderPrice);
+
+                    }else{
+                        alert("下单失败，原因为" + data.data.errorMsg);
+                        if (data.data.errorCode==20003){
+                            window.location.href="/loginpage";
+                        }
+                    }
+                },
+                error:function(data){
+                    alert("下单失败,原因为" + data.responseText);
+                }
+            })
+        });
+
         $.ajax({
             type:"Get",
             url:"/item/get",
@@ -75,13 +104,13 @@
                     reloadDom(data.data);
 
                 }else{
-                    alert("商品添加失败，原因为" + data.data.errorMsg);
+                    alert("查询失败，原因为" + data.data.errorMsg);
                 }
             },
             error:function(data){
-                alert("商品添加失败,原因为" + data.responseText);
+                alert("查询失败,原因为" + data.responseText);
             }
-        })
+        });
     });
 
     function reloadDom(item) {
